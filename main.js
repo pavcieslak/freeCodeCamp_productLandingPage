@@ -1,0 +1,1 @@
+console.log('Hey! I\'m open for new opportunities, feel free to get in touch. Even if I\'m not a good fit, and you have a spare minute, contact me, let\'s talk about technology, cars, especially BMW E30 as I\'m a big fan of those.');
