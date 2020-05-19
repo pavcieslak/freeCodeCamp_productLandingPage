@@ -70,8 +70,11 @@ table {
   margin: 0;
 }
 
+/* Global
+=================================== */
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -83,8 +86,124 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+.container-fluid {
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header
+=================================== */
+header#header {
+  position: relative;
+  top: -1px;
+  width: 100%;
+  z-index: 100;
+}
+header#header #header-img {
+  margin: -67px 0;
+}
+
+.nav-link {
+  padding: 0;
+}
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+}
+#nav-bar ul li {
+  position: relative;
+  display: inline-block;
+}
+#nav-bar ul li:not(:last-child) {
+  margin-right: 5rem;
+}
+#nav-bar ul li a:focus, #nav-bar ul li a:active {
+  font-weight: 600;
+}
+#nav-bar ul li a:hover::before {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: #058EFF;
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  transform: translateX(-50%);
+}
+
+#header-img {
+  align-self: center;
+  position: relative;
+}
+
+.top-banner {
+  background: #28292B;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+  color: #fff;
+  background: url("https://images.pexels.com/photos/2974246/pexels-photo-2974246.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260") no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+.top-banner h1 {
+  font-weight: 500;
+}
+.top-banner h1, .top-banner p, .top-banner form {
+  z-index: 15;
+}
+
+.tb-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: black;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0.3;
+}
+
+section article {
+  min-height: 600px;
+}
+
+/* Form
+=================================== */
+form {
+  display: flex;
+  flex-direction: column;
+}
+form input {
+  border: none;
+  margin-top: 2rem;
+  text-align: center;
+  min-height: 45px;
+  min-width: 300px;
+  border-radius: 4px;
+}
+
 /* Typography
 =================================== */
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
+
 h1 {
   font-size: 4.209rem;
 }
@@ -121,10 +240,6 @@ p {
   h4 {
     font-size: calc(1.777rem/1.2);
   }
-
-  p {
-    font-size: calc(1.6rem/1.1);
-  }
 }
 @media (max-width: 768px) {
   h1 {
@@ -153,5 +268,19 @@ p {
 
 /* Buttons
 =================================== */
+.btn {
+  background: #058EFF;
+  font-size: inherit;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  min-width: 300px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.btn:hover {
+  color: #fff;
+  background: #036cc2;
+}
 
 /*# sourceMappingURL=style.css.map */

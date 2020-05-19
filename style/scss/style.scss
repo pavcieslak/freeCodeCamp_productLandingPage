@@ -9,8 +9,10 @@ website:   lucmedia.pl
 
 /* Variables
 =================================== */
-
-
+$top_banner_bg: 'https://images.pexels.com/photos/2974246/pexels-photo-2974246.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260';
+$white: #fff;
+$nice-blue: #058EFF;
+$nice-blue-secondary: rgb(3, 108, 194);
 
 /* Imports 
 =================================== */
@@ -18,7 +20,10 @@ website:   lucmedia.pl
 
 * {box-sizing: border-box; padding: 0; margin: 0;}
 
-html {font-size: 10px;}
+/* Global
+=================================== */
+
+html {font-size: 10px; scroll-behavior: smooth;}
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
@@ -27,26 +32,116 @@ body {
   color: #333;
   text-rendering: optimizeLegibility;
 }
+.container-fluid {padding: 0;}
+a {
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
 
 
+/* Header
+=================================== */
+header#header {
+  position: relative;
+  top: -1px;
+  width: 100%;
+  z-index: 100;
+  #header-img {
+    margin: -67px 0;
+  }
+}
+.nav-link {
+  padding: 0;
+}
+#nav-bar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  ul li {
+    position: relative;
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 5rem;
+    }
+    a:focus, a:active {
+      font-weight: 600;
+    }
+    a:hover::before {
+      content: '';
+      width: 100%;
+      height: 4px;
+      background: $nice-blue;
+      position: absolute;
+      left: 50%;
+      bottom: -4px;
+      transform: translateX(-50%);
+    }
+  }
+}
+#header-img {
+  align-self: center;
+  position: relative;
+}
+.top-banner {
+  background: #28292B;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+  color: $white;
+  background: url($top_banner_bg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  h1 {
+    font-weight: 500;
+  }
+  h1, p, form {
+    z-index: 15;
+  }
+}
+.tb-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: black;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: .3;
+}
+section {
+  article {
+    min-height: 600px;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Form
+=================================== */
+form {
+  display: flex;
+  flex-direction: column;
+  input {
+    border: none;
+    margin-top: 2rem;
+    text-align: center;
+    min-height: 45px;
+    min-width: 300px;
+    border-radius: 4px;
+    }
+  }
 
 
 /* Typography
 =================================== */
+h1, h2, h3, h4 {font-weight: 600;}
 h1{font-size: 4.209rem;}
 h2{font-size: 3.157rem;}
 h3{font-size: 2.369rem;}
@@ -58,7 +153,6 @@ p {font-size: 1.6rem;}
   h2{font-size: calc(3.157rem/1.2);}
   h3{font-size: calc(2.369rem/1.2);}
   h4{font-size: calc(1.777rem/1.2);}
-  p {font-size: calc(1.6rem/1.1);}
 }
 
 @media (max-width: 768px) {
@@ -73,3 +167,17 @@ p {font-size: 1.6rem;}
 
 /* Buttons
 =================================== */
+.btn {
+  background: $nice-blue;
+  font-size: inherit;
+  color: $white;
+  text-align: center;
+  padding: 1rem 0;
+  min-width: 300px;
+  border-radius: 4px;
+  display: inline-block;
+  &:hover {
+    color: $white;
+    background: $nice-blue-secondary;
+  }
+}

@@ -11,29 +11,69 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-<div class="container">
-  <h1>title tag</h1>
-</div>
 
+  <!-- top navigation -->
+  <div class="container" id="top">
+    <header id="header"> 
+      <nav id="nav-bar">
+        <a href="#top"><img src="https://www.freepngimg.com/thumb/car/60121-art-car-vector-bmw-m3-series-thumb.png" alt="" id="header-img"></a>
+        <ul>
+          <li><a class="nav-link" href="#features">Features</a></li>
+          <li><a class="nav-link" href="#howItWorks">How it works</a></li>
+          <li><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li><a href="#"><svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd"/>
+            <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd"/></svg></a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
 
+  <!-- top banner -->
+  <div class="container-fluid">
+    <div class="top-banner">
+      <div class="tb-overlay"></div>
+      <h1>welcome to bmw e30 club</h1>
+      <p style="color: rgb(200,200,200);">great articles each week - DIY projects - events - showroom - videos</p>
+      <form action="https://www.freecodecamp.com/email-submit" id="form" method="POST">
+        <input type="email" id="email" name="email" placeholder=" enter your email here " pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required>
+        <input class="btn btn-submit" id="submit" type="submit" value="sign up today">
+      </form>
+    </div>
+  </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <!-- content -->
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 text-center">
+          <!-- promo video copy -->
+          <h2>respect your elders</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sapiente recusandae similique in blanditiis facere adipisci impedit labore alias vitae quae dolor excepturi tenetur, nostrum dicta ipsam totam voluptatum dignissimos.</p>
+          <a class="btn btn-primary" href="">read more</a>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <!-- promo video -->
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe id="video" class="embed-responsive-item" src="https://www.youtube.com/embed/-jAaMZ62-dg" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <!-- sections -->
+      <section>
+        <article id="features">
+          <h2>features</h2>
+        </article>
+        <article id="howItWorks">
+          <h2>howItWorks</h2>
+        </article>
+        <article id="pricing">
+          <h2>pricing</h2>
+        </article>
+      </section>
+    </div>
+  </main>
+    
   <!-- Scripts -->
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   <script src="main.js"></script>
