@@ -13,6 +13,7 @@ $top_banner_bg: 'https://images.pexels.com/photos/2974246/pexels-photo-2974246.j
 $white: #fff;
 $nice-blue: #058EFF;
 $nice-blue-secondary: rgb(3, 108, 194);
+$bmwStripesBg: 'https://i.pinimg.com/originals/e2/21/77/e2217744e8f6a2075a60b9d66803d43e.png';
 
 /* Imports 
 =================================== */
@@ -45,16 +46,28 @@ a {
 /* Header
 =================================== */
 header#header {
-  position: relative;
-  top: -1px;
+  position: fixed;
+  top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
+  background: $white;
+  border-bottom: 1px solid rgb(230,230,230);
   #header-img {
-    margin: -67px 0;
+    max-height: 55px;
+  }
+}
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  p {
+    font-weight: 600;
+    margin-left: .5rem;
   }
 }
 .nav-link {
   padding: 0;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 #nav-bar {
   top: 0;
@@ -62,6 +75,8 @@ header#header {
   justify-content: space-between;
   align-items: center;
   padding: 3rem;
+  max-width: 1300px;
+  margin: auto;
   ul li {
     position: relative;
     display: inline-block;
@@ -94,13 +109,15 @@ header#header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 400px;
+  height: 600px;
   color: $white;
   background: url($top_banner_bg) no-repeat center center;
   background-size: cover;
   position: relative;
+  margin-top: 100px;
   h1 {
     font-weight: 500;
+    text-transform: uppercase;
   }
   h1, p, form {
     z-index: 15;
@@ -118,7 +135,11 @@ header#header {
 }
 section {
   article {
-    min-height: 600px;
+    padding: 3rem 0;
+    & > h2 {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid rgb(230,230,230);
+    }
   }
 }
 
@@ -127,15 +148,84 @@ section {
 form {
   display: flex;
   flex-direction: column;
-  input {
+  input[type="email"] {
     border: none;
     margin-top: 2rem;
     text-align: center;
     min-height: 45px;
-    min-width: 300px;
-    border-radius: 4px;
+    min-width: 240px;
+    border-radius: 30px;
+    margin-bottom: 1.5rem;
+    outline: 0;
+    transition: .2s ease-in-out;
+    &:focus {
+      box-shadow: 0 0 2px 3px $nice-blue;
     }
   }
+  input[type="submit"] {
+    max-width: 150px;
+    margin: auto;
+  }
+}
+
+.promo-video-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  align-items: center;
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Main
+=================================== */
+main {
+  max-width: 1300px;
+  margin: auto;
+  background: $white;
+  position: relative;
+  top: -6rem;
+  padding: 6rem;
+  z-index: 300;
+  box-shadow: 0 0 5rem -4rem black;
+  overflow: hidden;
+}
+
+/* Articles
+=================================== */
+article {
+  margin: 3rem auto;
+  .article-img {
+    text-align: center;
+  }
+}
+.features-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+  .features-item {
+    text-align: center;
+    h3 {
+      margin-bottom: 1rem;
+    }
+  }
+}
+.features-list, .pricing-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+  .features-item, .pricing-item {
+    text-align: center;
+    h3 {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+/* Spacers
+=================================== */
+.spacer3 {height: 3rem;}
 
 
 /* Typography
@@ -172,8 +262,8 @@ p {font-size: 1.6rem;}
   color: $white;
   text-align: center;
   padding: 1rem 0;
-  min-width: 300px;
-  border-radius: 4px;
+  min-width: 180px;
+  border-radius: 30px;
   display: inline-block;
   &:hover {
     color: $white;

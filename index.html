@@ -13,65 +13,123 @@
 <body>
 
   <!-- top navigation -->
-  <div class="container" id="top">
-    <header id="header"> 
-      <nav id="nav-bar">
-        <a href="#top"><img src="https://www.freepngimg.com/thumb/car/60121-art-car-vector-bmw-m3-series-thumb.png" alt="" id="header-img"></a>
-        <ul>
-          <li><a class="nav-link" href="#features">Features</a></li>
-          <li><a class="nav-link" href="#howItWorks">How it works</a></li>
-          <li><a class="nav-link" href="#pricing">Pricing</a></li>
-          <li><a href="#"><svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd"/>
-            <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd"/></svg></a></li>
-        </ul>
-      </nav>
-    </header>
-  </div>
+  <header id="header"> 
+    <nav id="nav-bar">
+      <div class="logo-wrapper">
+        <a href="#top"><img src="https://cdn.iconscout.com/icon/free/png-512/bmw-17-896235.png" alt="" id="header-img"></a>
+        <p>BMWE30CLUB</p>
+      </div>
+      <ul class="navbar">
+        <li><a class="nav-link" href="#features">Features</a></li>
+        <li><a class="nav-link" href="#howItWorks">How it works</a></li>
+        <li><a class="nav-link" href="#pricing">Pricing</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- top banner -->
-  <div class="container-fluid">
-    <div class="top-banner">
-      <div class="tb-overlay"></div>
-      <h1>welcome to bmw e30 club</h1>
-      <p style="color: rgb(200,200,200);">great articles each week - DIY projects - events - showroom - videos</p>
-      <form action="https://www.freecodecamp.com/email-submit" id="form" method="POST">
-        <input type="email" id="email" name="email" placeholder=" enter your email here " pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required>
-        <input class="btn btn-submit" id="submit" type="submit" value="sign up today">
-      </form>
-    </div>
+  <div class="top-banner">
+    <div class="tb-overlay"></div>
+    <h1>welcome to bmw e30 club</h1>
+    <p style="color: rgb(200,200,200);">great articles each week - DIY projects - events - showroom - videos - forum</p>
+    <form action="https://www.freecodecamp.com/email-submit" id="form" method="POST">
+      <input type="email" id="email" name="email" placeholder=" enter your email here " pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required>
+      <input class="btn btn-submit" id="submit" type="submit" value="sign up today">
+    </form>
   </div>
+
 
   <!-- content -->
   <main>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-4 text-center">
-          <!-- promo video copy -->
-          <h2>respect your elders</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sapiente recusandae similique in blanditiis facere adipisci impedit labore alias vitae quae dolor excepturi tenetur, nostrum dicta ipsam totam voluptatum dignissimos.</p>
-          <a class="btn btn-primary" href="">read more</a>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <!-- promo video -->
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe id="video" class="embed-responsive-item" src="https://www.youtube.com/embed/-jAaMZ62-dg" allowfullscreen></iframe>
+    <!-- promo video -->
+    <div class="promo-video-container">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe id="video" class="embed-responsive-item" src="https://www.youtube.com/embed/Yh_LNW_AVPY" allowfullscreen></iframe>
+      </div>
+      <div>
+        <h2>1984 BMW E30 Promo Video</h2>
+        <p>The BMW E30 is an entry-level luxury car which was produced by BMW from 1982 to 1994. The initial models used the coupe (two-door sedan) body style. Four-door sedan models were introduced in 1983, convertibles were introduced in 1985 and estate (“Touring”) models were introduced in 1987.
+
+        The E36 replaced the E30 coupe models in 1990, with other E30 body styles being phased out of production until the final E30 model, a Touring, was produced in 1994.</p>
+        <div class="spacer3"></div>
+        <a href="#" class="btn">all videos</a>
+      </div>
+    </div>
+    <!-- /promo video -->
+
+    <!-- sections -->
+    <section>
+      <article id="features">
+        <h2>Features</h2>
+        <div class="features-list">
+          <div class="features-item">
+            <h3>Layout</h3>
+            <p>Rear-wheel drive All-wheel drive (325iX only)</p>
+          </div>
+          <div class="features-item">
+            <h3>Engine</h3>
+            <p>Petrol: 1.6-2.5 L M10/M40/M42 I4 2.0-2.5 L S14 I4 2.0-2.7 L M20 I6 Diesel: 2.4 L M21 I6</p>
+          </div>
+          <div class="features-item">
+            <h3>Transmission</h3>
+            <p>4-speed manual 5-speed manual 3-speed automatic 4-speed automatic</p>
           </div>
         </div>
-      </div>
-      <!-- sections -->
-      <section>
-        <article id="features">
-          <h2>features</h2>
-        </article>
-        <article id="howItWorks">
-          <h2>howItWorks</h2>
-        </article>
-        <article id="pricing">
-          <h2>pricing</h2>
-        </article>
-      </section>
-    </div>
+      </article>
+      <article id="howItWorks">
+        <h2>How it works</h2>
+        <p>At the launch of the E30 range in 1982, the 316 used a 1766 cc M10 fed by a carburetor and producing 66 kW (90 PS; 89 hp), this engine allowed BMW to offer a cheap, entry-level car in the range. The 318i had the same M10 engine, but with Jetronic fuel injection, pushing power to 77 kW (105 PS; 103 hp) while also improving fuel economy.</p>
+        <div class="spacer3"></div>
+        <p>The 1987 "Series 2" update introduced a new four-cylinder SOHC engine, the 1796 cc (M40B18) with 85 kW (116 PS; 114 hp). This engine incorporated Motronic fuel injection. The 316 was replaced by the 316i, which used a 1596 cc M40B16, producing 75 kW (102 PS; 101 hp). This was not quite as torquey as the 66 kW (90 PS; 89 hp) 1766 cc M10 it replaced - nevertheless, it offered superior performance overall. In South Africa and perhaps some other markets, the old M10-powered 316 continued until 1991, gaining the new bumpers when the range was updated. The 316i model (and previous 316 model) was not sold in Australia, where the base model continued to be the 318i.</p>
+
+        <div class="spacer3"></div>
+
+        <div class="article-img">
+
+          <figure>
+            <img src="https://www.classicandsportscar.com/sites/default/files/styles/article_inline_single/public/2018-11/classic_and_sports_car_BMW_e30_buyers_guide_owners_view.png?itok=6ZjIqMvW" alt=""/>
+            <figcaption>Convertible models can cost up to 12k in showroom condition.</figcaption>
+          </figure>
+        </div>
+
+        <div class="spacer3"></div>
+
+        <p>The 318iS coupe was released in 1989, soon followed by the 318i sedan and 318iC convertible. These models introduced a new engine, the chain-driven DOHC M42 1.8 L 16-valve engine w. This is the most modern engine available in the E30 range, incorporating the updated Bosch Motronic 1.3, hydraulic valve adjusters and four individual coil packs which resulted in a very high hp per litre as well as reasonable fuel economy (33mpg) and CO2 emissions (190 g/km). The excellent weight distribution of the 318iS & 318ic has led to frequent comparisons with the famous E30 M3. Nicknames include "mini M3" or "poor man's M3."</p>
+        <div class="spacer3"></div>
+        <p>The M3 is powered by the BMW S14 engine, a high-revving motorsport engine.</p>
+      </article>
+      <article id="pricing">
+        <h2>BMW E30 3 Series price guide</h2>
+        <div class="pricing-list">
+          <div class="pricing-item">
+            <h3>4-door</h3>
+            <ul>
+              <li>Show: £7000</li>
+              <li>Average: £3000</li>
+              <li>Restoration: £500</li>
+            </ul>
+          </div>
+          <div class="pricing-item">
+            <h3>Convertible</h3>
+            <ul>
+              <li>Show: 12k</li>
+              <li>Average £6000</li>
+              <li>Restoration: £1500</li>
+            </ul>
+          </div>
+          <div class="pricing-item">
+            <h3>325iS M-Tech</h3>
+            <ul>
+              <li>Show: £20k</li>
+              <li>Average: £15,000</li>
+              <li>Restoration: £7000</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- sections -->
+
   </main>
     
   <!-- Scripts -->
