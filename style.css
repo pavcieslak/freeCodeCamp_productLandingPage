@@ -64,6 +64,11 @@ table {
   border-spacing: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -157,6 +162,18 @@ header#header #header-img {
   transform: translateX(-50%);
 }
 
+@media (max-width: 768px) {
+  #nav-bar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  #nav-bar ul li:not(:last-child) {
+    margin-right: 1rem;
+  }
+  #nav-bar .nav-link {
+    font-size: 1.4rem;
+  }
+}
 #header-img {
   align-self: center;
   position: relative;
@@ -184,6 +201,11 @@ header#header #header-img {
   z-index: 15;
 }
 
+@media (max-width: 768px) {
+  .top-banner p {
+    padding: 0 6rem;
+  }
+}
 .tb-overlay {
   position: absolute;
   left: 0;
@@ -238,6 +260,11 @@ form input[type=submit] {
   margin-bottom: 1.5rem;
 }
 
+@media (max-width: 991px) {
+  .promo-video-container {
+    grid-template-columns: 1fr;
+  }
+}
 /* Main
 =================================== */
 main {
@@ -252,6 +279,12 @@ main {
   overflow: hidden;
 }
 
+@media (max-width: 991px) {
+  main {
+    padding: 3rem;
+    text-align: center;
+  }
+}
 /* Articles
 =================================== */
 article {
@@ -285,8 +318,21 @@ article .article-img {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 991px) {
+  .features-list, .pricing-list {
+    grid-template-columns: 1fr;
+  }
+}
 /* Spacers
 =================================== */
+.spacer1 {
+  height: 1rem;
+}
+
+.spacer2 {
+  height: 2rem;
+}
+
 .spacer3 {
   height: 3rem;
 }

@@ -18,6 +18,7 @@ $bmwStripesBg: 'https://i.pinimg.com/originals/e2/21/77/e2217744e8f6a2075a60b9d6
 /* Imports 
 =================================== */
 @import 'reset';
+img {max-width: 100%; height: auto;}
 
 * {box-sizing: border-box; padding: 0; margin: 0;}
 
@@ -98,6 +99,22 @@ header#header {
     }
   }
 }
+
+@media (max-width: 768px) {
+  #nav-bar {
+    flex-direction: column;
+    padding: 1rem;
+    ul li {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+    .nav-link {
+      font-size: 1.4rem;
+    }
+  }
+}
+
 #header-img {
   align-self: center;
   position: relative;
@@ -123,6 +140,15 @@ header#header {
     z-index: 15;
   }
 }
+
+@media (max-width: 768px) {
+  .top-banner {
+    p {
+      padding: 0 6rem;
+    }
+  }
+}
+
 .tb-overlay {
   position: absolute;
   left: 0;
@@ -178,6 +204,11 @@ form {
   }
 }
 
+@media(max-width: 991px) {
+  .promo-video-container {
+    grid-template-columns: 1fr;
+  }
+}
 /* Main
 =================================== */
 main {
@@ -190,6 +221,13 @@ main {
   z-index: 300;
   box-shadow: 0 0 5rem -4rem black;
   overflow: hidden;
+}
+
+@media(max-width: 991px) {
+  main {
+    padding: 3rem;
+    text-align: center;
+  }
 }
 
 /* Articles
@@ -223,8 +261,16 @@ article {
   }
 }
 
+@media(max-width: 991px) {
+  .features-list, .pricing-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Spacers
 =================================== */
+.spacer1 {height: 1rem;}
+.spacer2 {height: 2rem;}
 .spacer3 {height: 3rem;}
 
 
